@@ -161,4 +161,30 @@
 // console.log(checkPrime(3));
 
 // 10. Write a function to calculate the power of a number (x^n).
-console.log("10. Write a function to calculate the power of a number (x^n).");
+// console.log("10. Write a function to calculate the power of a number (x^n).");
+
+let input = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 555, 555];
+// output=[1,1,2,2,3,3,4,5]
+function check(arr) {
+  let obj = {};
+  let opt = [];
+  for (let i = 0; i < input.length; i++) {
+    if (obj[arr[i]]) {
+      obj[arr[i]] += 1;
+    } else {
+      obj[arr[i]] = 1;
+    }
+  }
+
+  for (let key in obj) {
+    if (obj[key] >= 2) {
+      for (let i = 0; i < 2; i++) {
+        opt.push(Number(key));
+      }
+    } else if (obj[key] === 1) {
+      opt.push(Number(key));
+    }
+  }
+  return opt;
+}
+console.log(check(input));
