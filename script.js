@@ -163,28 +163,162 @@
 // 10. Write a function to calculate the power of a number (x^n).
 // console.log("10. Write a function to calculate the power of a number (x^n).");
 
-let input = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 555, 555];
-// output=[1,1,2,2,3,3,4,5]
-function check(arr) {
-  let obj = {};
-  let opt = [];
-  for (let i = 0; i < input.length; i++) {
-    if (obj[arr[i]]) {
-      obj[arr[i]] += 1;
-    } else {
-      obj[arr[i]] = 1;
-    }
-  }
+// let input = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 555, 555];
+// // output=[1,1,2,2,3,3,4,5]
+// function check(arr) {
+//   let obj = {};
+//   let opt = [];
+//   for (let i = 0; i < input.length; i++) {
+//     if (obj[arr[i]]) {
+//       obj[arr[i]] += 1;
+//     } else {
+//       obj[arr[i]] = 1;
+//     }
+//   }
 
-  for (let key in obj) {
-    if (obj[key] >= 2) {
-      for (let i = 0; i < 2; i++) {
-        opt.push(Number(key));
-      }
-    } else if (obj[key] === 1) {
-      opt.push(Number(key));
-    }
-  }
-  return opt;
-}
-console.log(check(input));
+//   for (let key in obj) {
+//     if (obj[key] >= 2) {
+//       for (let i = 0; i < 2; i++) {
+//         opt.push(Number(key));
+//       }
+//     } else if (obj[key] === 1) {
+//       opt.push(Number(key));
+//     }
+//   }
+//   return opt;
+// }
+// console.log(check(input));
+
+// 11. Write a function to find the smallest number in an array.
+// console.log("11. Write a function to find the smallest number in an array.");
+
+// function smallestNum(arr) {
+//   arr.sort((a, b) => a - b);
+//   return arr[0];
+// }
+
+// console.log(smallestNum([2, 1, 3, 23, 4, 4, 43, 9]));
+
+// function smallestNum(arr) {
+//   let prev = Infinity;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (prev > arr[i]) {
+//       prev = arr[i];
+//     }
+//   }
+//   return prev;
+// }
+// console.log(smallestNum([2, 3, -1, 34, 32, 535, 5, 6456, 456]));
+
+// 12. Write a function to count the number of words in a string.
+// console.log("12. Write a function to count the number of words in a string.");
+
+// function countNumOfWords(str) {
+//   let arr = str.split(" ");
+
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     count++;
+//   }
+//   return count;
+// }
+// console.log(countNumOfWords("hello Javascript Hello React"));
+
+// 13. Write a function to check if a given year is a leap year.
+// console.log("13. Write a function to check if a given year is a leap year.");
+
+// function leapYear(year) {
+//   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//     console.log(`${year} is a leap year`);
+//   } else {
+//     console.log(`${year} is not a leap year`);
+//   }
+// }
+// console.log(leapYear(2024));
+
+// 14. Write a function to remove vowels from a string.
+// console.log("14. Write a function to remove vowels from a string.");
+
+// function vowels(str) {
+//   let vowels = "aeiou".split("");
+//   let result = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i])) {
+//       result.push(str[i]);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(vowels("aftabe khan"));
+
+// 15. Write a function to check if a string contains only digits.
+// console.log("15. Write a function to check if a string contains only digits.");
+
+// function digits(str) {
+//   return str !== " " && str.split("").every((chr) => chr >= "0" && chr <= "9");
+// }
+// console.log(digits("122344"));
+// function digits(str) {
+//   return str !== "" && parseInt(str).toString() === str;
+// }
+// console.log(digits("122344"));
+
+// 16. Write a function to find the sum of digits of a number.
+// console.log("16. Write a function to find the sum of digits of a number.");
+
+// function sumOfDigits(num) {
+//   let toStr = num.toString();
+//   let result = 0;
+//   for (let i = 0; i < toStr.length; i++) {
+//     result += Number(toStr[i]);
+//   }
+//   return result;
+// }
+// console.log(sumOfDigits(12341455));
+
+// 17. Write a function to check if all elements in an array are unique.
+// console.log(
+//   "17. Write a function to check if all elements in an array are unique."
+// );
+
+// function uniqueElement(arr) {
+//   let duplicate = [];
+//   let res = true;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!duplicate.includes(arr[i])) {
+//       duplicate.push(arr[i]);
+//       res = true;
+//     } else {
+//       return false;
+//     }
+//   }
+//   return res;
+// }
+// console.log(uniqueElement([1, 2, 3, 2, 4, 55]));
+
+// function uniqueElement(arr) {
+//   return new Set(arr).size === arr.length;
+// }
+// console.log(uniqueElement([1, 2, 3, 4, 5, 6]));
+
+// 21. Write a function to find the longest word in a string.
+// console.log("21. Write a function to find the longest word in a string.");
+
+// function longestWord(word) {
+//   let arr = word.split(" ");
+//   let length = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (length < arr[i].length) {
+//       length = arr[i].length;
+//     }
+//   }
+//   return length;
+// }
+// console.log(longestWord("hellossssssss this javascript code"));
+
+// 22. Write a function to implement a basic calculator (add, subtract, multiply, divide).
+
+console.log(
+  "22. Write a function to implement a basic calculator (add, subtract, multiply, divide)."
+);
