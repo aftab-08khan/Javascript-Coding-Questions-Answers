@@ -344,9 +344,20 @@
 // }
 // console.log(flattenArray([12, [2, 2, 2, [2, 333343, 545], [45, 2, 5, 3, 2]]]));
 
-// 24. Write a function to check for anagrams between two strings.
+// // 24. Write a function to check for anagrams between two strings.
 
-console.log("24. Write a function to check for anagrams between two strings.");
+// console.log("24. Write a function to check for anagrams between two strings.");
 
-function anagrams() {}
-console.log(anagrams("mug", "gum"));
+// function anagrams(str1, str2) {
+//   let sort1 = str1.split("").sort();
+//   let sort2 = str2.split("").sort();
+//   if (sort1.length === sort2.length) {
+//     if (sort1.join("") === sort2.join("")) {
+//       console.log("is an anagrams");
+//     } else {
+//       console.log("not an anagrams");
+//     }
+//   }
+//   // return sort1.join("") === sort2.join("");
+// }
+// console.log(anagrams("mug", "gum"));
