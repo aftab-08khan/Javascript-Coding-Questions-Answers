@@ -319,6 +319,34 @@
 
 // 22. Write a function to implement a basic calculator (add, subtract, multiply, divide).
 
-console.log(
-  "22. Write a function to implement a basic calculator (add, subtract, multiply, divide)."
-);
+// console.log(
+//   "22. Write a function to implement a basic calculator (add, subtract, multiply, divide)."
+// );
+
+// // 23. Write a function to flatten a nested array.
+// console.log("23. Write a function to flatten a nested array.");
+// let arr = [12, [2, 2, 2, [2, 333343, 545], [45, 2, 5, 3, 2]]].flat(Infinity);
+// console.log(arr);
+
+// function flattenArray(arr) {
+//   let result = [];
+//   innerArrayFlatten(arr);
+//   function innerArrayFlatten(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (Array.isArray(arr[i])) {
+//         innerArrayFlatten(arr[i]);
+//       } else {
+//         result.push(arr[i]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+// console.log(flattenArray([12, [2, 2, 2, [2, 333343, 545], [45, 2, 5, 3, 2]]]));
+
+// 24. Write a function to check for anagrams between two strings.
+
+console.log("24. Write a function to check for anagrams between two strings.");
+
+function anagrams() {}
+console.log(anagrams("mug", "gum"));
