@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Add Question Request</title>
+  </head>
+  <body class="bg-gray-900 p-6 flex justify-center">
+    <form
+      class="bg-gray-700 p-6 rounded-lg shadow-lg w-full max-w-lg"
+      action="https://formspree.io/f/xwpvgoak"
+      method="POST"
+    >
+      <h2 class="text-xl text-white font-bold mb-4">
+        Request to Add a Question
+      </h2>
+
+      <label class="block mb-2 font-semibold text-white">Question</label>
+      <input
+        type="text"
+        name="question"
+        class="w-full p-2 border rounded mb-4"
+        placeholder="Enter your question"
+        required
+      />
+
+      <label class="block mb-2 font-semibold text-white">Sender Name</label>
+      <input
+        name="name"
+        type="text"
+        class="w-full p-2 border rounded mb-4"
+        placeholder="Your name"
+      />
+
+      <label class="block mb-2 font-semibold text-white"
+        >Answer (Optional)</label
+      >
+      <input
+        type="text"
+        name="answer"
+        class="w-full p-2 border rounded mb-4"
+        placeholder="Enter the correct answer"
+      />
+
+      <label class="block mb-2 font-semibold text-white"
+        >Difficulty Level</label
+      >
+      <select class="w-full p-2 border rounded mb-4" name="type">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+      >
+        Send Request to Add Question
+      </button>
+    </form>
+  </body>
+</html>

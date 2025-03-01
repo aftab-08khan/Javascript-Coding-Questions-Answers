@@ -377,3 +377,59 @@
 //   return null;
 // }
 // console.log(missingNumber([1, 3, 2, 4, 5, 6, 8, 7, 10, 9]));
+
+// 26. Write a function to sort an array without using sort().
+
+// console.log("26. Write a function to sort an array without using sort().");
+
+// function bubbleSort(arr) {
+//   let n = arr.length;
+
+//   for (let i = 0; i < n - 1; i++) {
+//     let swapped = false;
+//     for (let j = 0; j < n - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//         swapped = true;
+//       }
+//     }
+//     if (!swapped) {
+//       break;
+//     }
+//   }
+//   return arr;
+// }
+// console.log(bubbleSort([2, 5, 1, 9, 6, 4]));
+
+// 26. Rotate an array to the right by k steps.
+// console.log(" Rotate an array to the right by k steps.");
+
+// function rotateAnArray(k, arr) {
+//   let n = arr.length;
+//   k = k % n;
+//   let last = arr.slice(0, n - k);
+
+//   let first = arr.slice(n - k);
+//   return [...first, ...last];
+// }
+
+// console.log(rotateAnArray(4, [5, 6, 7, 8, 0, 1, 2, 3]));
+
+// 28. Count occurrences of each element in an array.
+// console.log("28. Count occurrences of each element in an array.");
+
+// function countOccOfArr(arr) {
+//   let obj = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (obj[arr[i]]) {
+//       obj[arr[i]] += 1;
+//     } else {
+//       obj[arr[i]] = 1;
+//     }
+//   }
+//   return obj;
+// }
+
+// console.log(countOccOfArr([1, 2, 3, 4, "hello", 5, 6, "aftab0", "aftab0"]));
