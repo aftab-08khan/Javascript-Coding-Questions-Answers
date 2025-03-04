@@ -471,6 +471,56 @@ function countOccOfArr(arr) {
 
 console.log(countOccOfArr([1, 2, 3, 4, "hello", 5, 6, "aftab0", "aftab0"]));
 
+
+
+// 29. Merge two sorted arrays into a single sorted array.
+
+console.log("29. Merge two sorted arrays into a single sorted array.");
+
+function mergeTwoSortedArrays(arr1, arr2) {
+  let sortedArr = [...arr1, ...arr2];
+
+  sortedArr.sort((a, b) => a - b);
+  return sortedArr;
+}
+console.log(mergeTwoSortedArrays([5, 6, 7, 8], [1, 2, 3, 4]));
+
+function mergeTwoSortedArrays(arr1, arr2) {
+  let sortedArr = [...arr1, ...arr2];
+  let n = sortedArr.length;
+  for (let i = 0; i < n - 1; i++) {
+    let swapped = false;
+    for (let j = 0; j < n - i - 1; j++) {
+      if (sortedArr[j] > sortedArr[j + 1]) {
+        let temp = sortedArr[j];
+        sortedArr[j] = sortedArr[j + 1];
+        sortedArr[j + 1] = temp;
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+  }
+  return sortedArr;
+}
+console.log(mergeTwoSortedArrays([3, 4, 5, 6], [1, 2, 3, 4]));
+
+
+
+// 30. Move all zeroes to the end of an array.
+console.log("30. Move all zeroes to the end of an array.");
+
+function moveAllZero(arr) {
+  let arrZeros = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      arrZeros.push(arr[i]);
+    }
+  }
+  const newArr = arr.filter((elem) => elem != 0);
+  return [...newArr, ...arrZeros];
+}
+console.log(moveAllZero([0, 4, 0, 9, 0, 5, 3, 0]));
+
             `;
       document.getElementById("codeBlock").textContent = solutions;
     </script>
