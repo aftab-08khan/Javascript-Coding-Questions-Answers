@@ -572,3 +572,78 @@
 // }
 
 // console.log(reverseWordsInStr("hello world hii"));
+
+// // 37. Write a function to generate a random number between a given range.
+
+// console.log(
+//   "37. Write a function to generate a random number between a given range."
+// );
+
+// function randomNumRange(num1, num2) {
+//   let randomNum = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+//   return randomNum;
+// }
+// console.log(randomNumRange(2, 5));
+
+// // 38. Write a program to find the GCD (Greatest Common Divisor) of two numbers.
+// console.log(
+//   "38. Write a program to find the GCD (Greatest Common Divisor) of two numbers."
+// );
+
+// function findGCD(a, b) {
+//   let gcd = 1;
+//   for (let i = 0; i <= Math.min(a, b); i++) {
+//     if (a % i == 0 && b % i == 0) {
+//       gcd = i;
+//     }
+//   }
+//   return gcd;
+// }
+
+// console.log(findGCD(48, 18));
+
+// // 39. Find the intersection of two strings (characters that appear in both strings).
+
+// console.log(
+//   "39. Find the intersection of two strings (characters that appear in both strings)."
+// );
+// function intersectionOfStr(str1, str2) {
+//   str1 = str1.split("");
+//   let res = [];
+//   for (let i = 0; i < str2.length; i++) {
+//     if (str1.includes(str2[i])) {
+//       res.push(str2[i]);
+//     }
+//   }
+//   return res;
+// }
+// console.log(intersectionOfStr("arpple", "orange"));
+
+// // 40. Write a function to check if a string has balanced parentheses.
+
+// console.log(
+//   "40. Write a function to check if a string has balanced parentheses."
+// );
+
+// function balancedParentheses(str) {
+//   let stack = [];
+
+//   for (let val of str) {
+//     if (val === "(" || val === "{" || val === "[") {
+//       stack.push(val);
+//     } else if (val === ")" || val === "}" || val === "]") {
+//       if (stack.length === 0) return false;
+//       let last = stack.pop();
+
+//       if (
+//         (last !== "{" && val === "}") ||
+//         (last !== "(" && val === ")") ||
+//         (last !== "[" && val === "]")
+//       ) {
+//         return false;
+//       }
+//     }
+//   }
+//   return stack.length === 0;
+// }
+// console.log(balancedParentheses("{[()]}"));
