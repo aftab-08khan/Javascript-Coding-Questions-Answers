@@ -619,31 +619,97 @@
 // }
 // console.log(intersectionOfStr("arpple", "orange"));
 
-// // 40. Write a function to check if a string has balanced parentheses.
+// // 40. Write a program to check if two arrays are equal (have the same elements in the same order).
 
 // console.log(
-//   "40. Write a function to check if a string has balanced parentheses."
+//   "Write a program to check if two arrays are equal (have the same elements in the same order)."
 // );
-
-// function balancedParentheses(str) {
-//   let stack = [];
-
-//   for (let val of str) {
-//     if (val === "(" || val === "{" || val === "[") {
-//       stack.push(val);
-//     } else if (val === ")" || val === "}" || val === "]") {
-//       if (stack.length === 0) return false;
-//       let last = stack.pop();
-
-//       if (
-//         (last !== "{" && val === "}") ||
-//         (last !== "(" && val === ")") ||
-//         (last !== "[" && val === "]")
-//       ) {
-//         return false;
+// function checkTwoArr(arr1, arr2) {
+//   let res = false;
+//   if (arr1.length === arr2.length) {
+//     for (let i = 0; i < arr1.length; i++) {
+//       if (arr2[i] === arr1[i]) {
+//         res = true;
+//       } else {
+//         return res;
 //       }
 //     }
+//   } else {
+//     return res;
 //   }
-//   return stack.length === 0;
+//   return res;
 // }
-// console.log(balancedParentheses("{[()]}"));
+// console.log(checkTwoArr([1, 2, 3], [1, 2, 2, 3]));
+// console.log(checkTwoArr([1, 2, 3], [1, 2, 3]));
+
+// // 42. Write a function to find the sum of all odd numbers in an array.
+// console.log(
+//   "42. Write a function to find the sum of all odd numbers in an array."
+// );
+
+// function sumOfOddNum(arr) {
+//   let filtered = arr.filter((num) => num % 2 !== 0);
+//   return filtered;
+// }
+// console.log(sumOfOddNum([1, 2, 3, 4, 5, 5, , 6, 7, 8, 9]));
+
+// function sumOfOddNum(arr) {
+//   let res = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 !== 0) {
+//       res.push(arr[i]);
+//     }
+//   }
+//   return res;
+// }
+// console.log(sumOfOddNum([12, 3, 4, 5, 7]));
+
+// // 43. Write a program to find the median of an array.
+
+// console.log("43. Write a program to find the median of an array.");
+
+// function medianOfArr(arr) {
+//   let sorted = arr.sort((a, b) => a - b);
+//   let median = Math.floor(sorted.length / 2);
+//   let res;
+
+//   if (median % 2 === 0) {
+//     res = sorted[median];
+//   } else {
+//     res = (sorted[median - 1] + sorted[median]) / 2;
+//   }
+//   return res;
+// }
+// console.log(medianOfArr([1, 2, 3, 4, 5, 6]));
+
+// 45. Write a program to shuffle the elements of an array randomly.
+// console.log(
+//   "45. Write a program to shuffle the elements of an array randomly."
+// );
+
+// function shuffleElement(arr) {
+//   let shuffle = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let random = Math.floor(Math.random() * (i + 1));
+//     shuffle.push(arr[random]);
+//   }
+//   return shuffle;
+// }
+// console.log(shuffleElement([1, 2, 3, 4]));
+
+// lo
+
+function longestSubString(str) {
+  let res = [];
+  let opt = [];
+  for (let i = 0; i < str.length; i++) {
+    if (!res.includes(str[i])) {
+      res.push(str[i]);
+    } else {
+      opt.push(res);
+      break;
+    }
+  }
+  return opt;
+}
+console.log(longestSubString("tagafgllaaa"));

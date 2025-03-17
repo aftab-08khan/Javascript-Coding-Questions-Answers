@@ -698,6 +698,72 @@ function balancedParentheses(str) {
 }
 console.log(balancedParentheses("{[()]}"));
 
+
+
+// 40. Write a program to check if two arrays are equal (have the same elements in the same order).
+
+console.log(
+  "Write a program to check if two arrays are equal (have the same elements in the same order)."
+);
+function checkTwoArr(arr1, arr2) {
+  let res = false;
+  if (arr1.length === arr2.length) {
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr2[i] === arr1[i]) {
+        res = true;
+      } else {
+        return res;
+      }
+    }
+  } else {
+    return res;
+  }
+  return res;
+}
+console.log(checkTwoArr([1, 2, 3], [1, 2, 2, 3]));
+console.log(checkTwoArr([1, 2, 3], [1, 2, 3]));
+
+
+// 42. Write a function to find the sum of all odd numbers in an array.
+console.log(
+  "42. Write a function to find the sum of all odd numbers in an array."
+);
+
+function sumOfOddNum(arr) {
+  let filtered = arr.filter((num) => num % 2 !== 0);
+  return filtered;
+}
+console.log(sumOfOddNum([1, 2, 3, 4, 5, 5, , 6, 7, 8, 9]));
+
+function sumOfOddNum(arr) {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      res.push(arr[i]);
+    }
+  }
+  return res;
+}
+console.log(sumOfOddNum([12, 3, 4, 5, 7]));
+
+
+// 43. Write a program to find the median of an array.
+
+console.log("43. Write a program to find the median of an array.");
+
+function medianOfArr(arr) {
+  let sorted = arr.sort((a, b) => a - b);
+  let median = Math.floor(sorted.length / 2);
+  let res;
+
+  if (median % 2 === 0) {
+    res = sorted[median];
+  } else {
+    res = (sorted[median - 1] + sorted[median]) / 2;
+  }
+  return res;
+}
+console.log(medianOfArr([1, 2, 3, 4, 5, 6]));
             `;
       document.getElementById("codeBlock").textContent = solutions;
     </script>
