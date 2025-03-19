@@ -697,19 +697,26 @@
 // }
 // console.log(shuffleElement([1, 2, 3, 4]));
 
-// lo
+// longest sub string
 
-function longestSubString(str) {
-  let res = [];
-  let opt = [];
+function longestSubStr(str) {
+  let uniqueElements = [];
+  let maxlen = 0;
+  let longestStr = "";
   for (let i = 0; i < str.length; i++) {
-    if (!res.includes(str[i])) {
-      res.push(str[i]);
-    } else {
-      opt.push(res);
-      break;
+    let string = "";
+    let temp = [];
+    for (let j = i; j < str.length; j++) {
+      if (temp.includes(str[j])) {
+        break;
+      }
+      temp.push(str[j]);
+      string += str[j];
+      if (string.length > maxlen)
+        (maxlen = string.length), (longestStr = string);
+      uniqueElements.push(string);
     }
   }
-  return opt;
+  return [longestStr, maxlen];
 }
-console.log(longestSubString("tagafgllaaa"));
+console.log(longestSubStr("hellohf"));

@@ -764,6 +764,31 @@ function medianOfArr(arr) {
   return res;
 }
 console.log(medianOfArr([1, 2, 3, 4, 5, 6]));
+
+// longest unquie sub string
+
+function longestSubStr(str) {
+  let uniqueElements = [];
+  let maxlen = 0;
+  let longestStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let string = "";
+    let temp = [];
+    for (let j = i; j < str.length; j++) {
+      if (temp.includes(str[j])) {
+        break;
+      }
+      temp.push(str[j]);
+      string += str[j];
+      if (string.length > maxlen)
+        (maxlen = string.length), (longestStr = string);
+      uniqueElements.push(string);
+    }
+  }
+  return [longestStr, maxlen];
+}
+console.log(longestSubStr("hellohf"));
+
             `;
       document.getElementById("codeBlock").textContent = solutions;
     </script>
